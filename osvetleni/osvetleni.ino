@@ -28,12 +28,12 @@ void loop() {
   if (state != lastState) { // Kontrola, zda se stav změnil
     switch (state) {
       case 1: turnAllOn(); break;
-      case 2: turnOrangeOn(); break;
-      case 3: turnOrangeOff(); break;
+      case 2: turnRedOn(); break;
+      case 3: turnRedOff(); break;
       case 4: turnGreenOn(); break;
       case 5: turnGreenOff(); break;
-      case 6: turnYellowOn(); break;
-      case 7: turnYellowOff(); break;
+      case 6: turnBlueOn(); break;
+      case 7: turnBlueOff(); break;
       case 8: turnAllOff(); break;
     }
     lastState = state; // Aktualizace posledního stavu
@@ -50,32 +50,32 @@ void turnAllOn(){
   delay(100);
 }
 
-void turnOrangeOn(){
+void turnGreenOn(){
   digitalWrite(13, HIGH);
   delay(100);
 }
 
-void turnOrangeOff(){
+void turnGreenOff(){
   digitalWrite(13, LOW);
   delay(100);
 }
 
-void turnGreenOn(){
+void turnBlueOn(){
   digitalWrite(12, HIGH);
   delay(100);
 }
 
-void turnGreenOff(){
+void turnBlueOff(){
   digitalWrite(12, LOW);
   delay(100);
 }
 
-void turnYellowOn(){
+void turnRedOn(){
   digitalWrite(11, HIGH);
   delay(100);
 }
 
-void turnYellowOff(){
+void turnRedOff(){
   digitalWrite(11, LOW);
   delay(100);
 }
